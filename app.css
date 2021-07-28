@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "app content";
+}
+main::before {
+  content: "";
+  width: 30%;
+  height: 90%;
+  max-width: 900px;
+  border-radius: 0px 0px 70% 70% / 0px 0px 40% 40%;
+  background: linear-gradient(
+    180deg,
+    hsl(293, 100%, 63%) 0%,
+    hsl(264, 100%, 61%) 65%
+  );
+  position: absolute;
+  top: 0;
+  left: -5%;
+  z-index: -1;
+}
+main::after {
+  content: "";
+  width: 30%;
+  height: 90%;
+  max-width: 900px;
+  border-radius: 0px 0px 70% 70% / 0px 0px 40% 40%;
+  background: hsl(270, 20%, 96%);
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  transform: rotate(180deg);
+  z-index: -5;
+}
+.app {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  grid-area: app;
+}
+.App__Container {
+  width: 32%;
+  height: fit-content;
+  min-width: 280px;
+  min-height: fit-content;
+  border: 10px solid white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  top: 10%;
+  left: 40%;
+  background-color: hsl(270, 20%, 96%);
+  position: relative;
+}
+.App__Container::before {
+  content: "";
+  width: 50%;
+  height: 5%;
+  position: absolute;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: -1%;
+  left: 25%;
+}
+.head {
+  width: 100%;
+  height: fit-content;
+  min-height: 100px;
+  background: linear-gradient(
+    270deg,
+    hsl(293, 100%, 63%) 0%,
+    hsl(264, 100%, 61%) 65%
+  );
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 52px 1fr 32px;
+  grid-template-areas: "image Name icon";
+}
+.image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: auto;
+  grid-area: image;
+  align-self: center;
+}
+.Name {
+  grid-area: Name;
+  align-self: center;
+  padding-left: 10px;
+}
+.icon {
+  width: 15px;
+  height: 15px;
+  grid-area: icon;
+  align-self: center;
+  padding-right: 10px;
+}
+.name {
+  color: white;
+  font-size: 0.9rem;
+  display: block;
+  font-weight: 500;
+}
+.status {
+  display: block;
+  color: hsl(276, 100%, 81%);
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+.chatSent {
+  width: fit-content;
+  font-size: 0.6rem;
+  color: hsl(276, 55%, 52%);
+  padding: 10px;
+  padding-right: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
+  background-color: hsl(270, 7%, 88%);
+  margin: 10px 10px 10px 10px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.chatReceived {
+  width: fit-content;
+  font-size: 0.6rem;
+  color: hsl(260, 1%, 39%);
+  padding: 10px;
+  padding-right: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: white;
+  margin: 10px 10px 10px auto;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.image1,
+.image2,
+.image3 {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.messageInput {
+  width: 90%;
+  padding: 10px 20px 10px 20px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.iconSend {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: hsl(271, 36%, 24%);
+  position: relative;
+}
+.iconSend::before {
+  content: "";
+  width: 3px;
+  height: 12px;
+  background-color: white;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+
+  transform: rotate(-45deg);
+}
+.iconSend::after {
+  content: "";
+  width: 3px;
+  height: 12px;
+  background-color: white;
+  position: absolute;
+  bottom: 20%;
+  right: 40%;
+  transform: rotate(45deg);
+}
+.message {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(206, 6%, 79%);
+}
+.content {
+  height: 100%;
+  width: 100%;
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0%;
+  padding-right: 40%;
+}
+.card {
+  display: grid;
+  width: fit-content;
+  grid-template-rows: 1fr;
+  grid-template-columns: 32px 1fr 52px;
+  background: linear-gradient(
+    270deg,
+    hsl(293, 100%, 63%) 0%,
+    hsl(264, 100%, 61%) 65%
+  );
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
+  padding: 10px;
+  padding-right: 20px;
+  margin: 10px;
+  grid-template-areas: "but1 time price";
+}
+.time {
+  grid-area: time;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: hsl(206, 6%, 79%);
+  justify-self: start;
+  align-self: center;
+}
+.but1 {
+  grid-area: but1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid hsl(289, 100%, 72%);
+}
+.price {
+  grid-area: price;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-self: end;
+  align-self: center;
+}
+.content h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: hsl(271, 36%, 24%);
+  margin-bottom: 5%;
+}
+.content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(270, 7%, 64%);
+}
+@media screen and (max-width: 1056px) {
+  body {
+    min-height: fit-content;
+    overflow: scroll;
+  }
+  main {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 800px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "app"
+      "content";
+  }
+  main::before,
+  main::after {
+    width: 50%;
+    height: 50%;
+  }
+  .App__Container {
+    width: 32%;
+    top: 20%;
+    left: 0;
+    margin: 0 auto;
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  h1,
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .attribution {
+    display: none;
+  }
+}
