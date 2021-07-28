@@ -65,9 +65,9 @@ main::after {
 }
 .App__Container {
   width: 32%;
-  height: fit-content;
+  height: max-content;
   min-width: 280px;
-  min-height: fit-content;
+  min-height: max-content;
   border: 10px solid white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
@@ -91,7 +91,7 @@ main::after {
 }
 .head {
   width: 100%;
-  height: fit-content;
+  height: max-content;
   min-height: 100px;
   background: linear-gradient(
     270deg,
@@ -141,7 +141,7 @@ main::after {
   font-weight: 400;
 }
 .chatSent {
-  width: fit-content;
+  width: max-content;
   font-size: 0.6rem;
   color: hsl(276, 55%, 52%);
   padding: 10px;
@@ -156,7 +156,7 @@ main::after {
   line-height: 1.5;
 }
 .chatReceived {
-  width: fit-content;
+  width: max-content;
   font-size: 0.6rem;
   color: hsl(260, 1%, 39%);
   padding: 10px;
@@ -240,7 +240,7 @@ main::after {
 }
 .card {
   display: grid;
-  width: fit-content;
+  width: max-content;
   grid-template-rows: 1fr;
   grid-template-columns: 32px 1fr 52px;
   background: linear-gradient(
@@ -294,7 +294,7 @@ main::after {
 }
 @media screen and (max-width: 1056px) {
   body {
-    min-height: fit-content;
+    min-height: max-content;
     overflow: scroll;
   }
   main {
